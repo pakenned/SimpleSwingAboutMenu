@@ -1,0 +1,15 @@
+#!/usr/bin/perl -w
+use strict;
+
+my $date=`git log --pretty=format:"%ad" --date=short  -1`;
+my $desc=`git describe`;
+
+map chomp, ($date, $desc);
+
+while (my $line = <>) {
+    chomp $line;
+    $line =~ s/\$DATE\$/\$DATE:$date\$/;
+    $line =~ s/"\$DESC\$"/"\$DESC: $desc\$"/;
+    print "$line\n";
+}
+
