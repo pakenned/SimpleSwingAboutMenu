@@ -1,0 +1,5 @@
+#!/bin/sh
+
+FILE=src/main/java/com/pakenned/util/swing/SimpleSwingAboutMenu/SimpleAboutMenu.java
+
+mv "$FILE" /tmp && git checkout "$FILE" && rm "/tmp/`basename $FILE`"
