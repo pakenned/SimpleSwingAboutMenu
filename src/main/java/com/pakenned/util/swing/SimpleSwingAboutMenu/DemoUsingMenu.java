@@ -11,11 +11,11 @@ import javax.swing.JMenuItem;
 import java.awt.FlowLayout;
 import java.awt.Dimension;
 
-public class SimpleMenu extends JPanel {
+public class DemoUsingMenu extends JPanel {
 
     private JTextField textField;
 
-    public SimpleMenu() {
+    public DemoUsingMenu() {
         setLayout(new FlowLayout());
         textField = new JTextField("Test Text Field");
         setPreferredSize(new Dimension(250,30));
@@ -23,9 +23,9 @@ public class SimpleMenu extends JPanel {
     }
 
     private static void createAndShowGUI() {
-        JFrame frame = new JFrame("SimpleMenu");
+        JFrame frame = new JFrame("DemoUsingMenu");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.add(new SimpleMenu());
+        frame.add(new DemoUsingMenu());
 
         JMenu ops = new JMenu("Operations");
         JMenuItem nop = new JMenuItem("No Op");
@@ -33,7 +33,7 @@ public class SimpleMenu extends JPanel {
 
         JMenuBar menubar = new JMenuBar();
         menubar.add(ops);
-        menubar.add(SimpleAboutMenu.getJMenu(frame, "SimpleMenu", "0.1 Beta"));
+        menubar.add(SimpleAboutMenu.getJMenu(frame, "DemoUsingMenu", "0.1 Beta"));
 
         frame.setJMenuBar(menubar);
         frame.pack();

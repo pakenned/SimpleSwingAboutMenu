@@ -6,11 +6,11 @@ import javax.swing.JTextField;
 import java.awt.FlowLayout;
 import java.awt.Dimension;
 
-public class SimpleMenuBar  extends JPanel {
+public class DemoUsingMenuBar  extends JPanel {
 
     private JTextField textField;
 
-    public SimpleMenuBar() {
+    public DemoUsingMenuBar() {
         setLayout(new FlowLayout());
         textField = new JTextField("Test Text Field");
         setPreferredSize(new Dimension(250,30));
@@ -18,10 +18,10 @@ public class SimpleMenuBar  extends JPanel {
     }
 
     private static void createAndShowGUI() {
-        JFrame frame = new JFrame("SimpleMenuBar");
+        JFrame frame = new JFrame("DemoUsingMenuBar");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.add(new SimpleMenuBar());
-        frame.setJMenuBar(SimpleAboutMenu.getJMenuBar(frame, "SimpleMenuBar", "0.1 Beta"));
+        frame.add(new DemoUsingMenuBar());
+        frame.setJMenuBar(SimpleAboutMenu.getJMenuBar(frame, "DemoUsingMenuBar", "0.1 Beta"));
         frame.pack();
         frame.setVisible(true);
     }
